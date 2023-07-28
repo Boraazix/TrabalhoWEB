@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap');
+
+*{
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background-color: white;
+}
+
+header, footer {
+    background-color: #131921;
+    color: white;
+}
+
+h2, footer p{
+    padding-left: 1rem;
+}
+h1 {
+    background-color: #242F41;
+    color: white;
+    padding-left: 1rem;
+}
+hr{
+}
