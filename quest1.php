@@ -116,10 +116,10 @@
                         break;
                     case 'range':
                         for ($i = 1; $i <= $qnt; $i++) {
-                            echo "<input type=\"$op\" name=\"$op$i\" id=\"$op$i\" min=\"0\" max=\"100\" value=\"" . number_format($i / 15 * 100, 2) . "\"><label for=\"$op$i\">Faixa $i</label><br>\n";
+                            echo "<input type=\"$op\" name=\"$op$i\" id=\"$op$i\" min=\"0\" max=\"100\" value=\"" . number_format(($i-1) / 14 * 100, 2) . "\"><label for=\"$op$i\">Faixa $i</label><br>\n";
                         }
                         for ($i = 1; $i <= $qnt; $i++) {
-                            echo "<pre><code>&lt;input type=\"$op\" name=\"$op$i\" id=\"$op$i\" min=\"0\" max=\"100\" value=\"" . number_format($i / 15 * 100, 2) . "\"&gt;&lt;label for=\"$op$i\"&gt;Faixa $i&lt;/label&gt;&lt;br&gt;</code></pre>";
+                            echo "<pre><code>&lt;input type=\"$op\" name=\"$op$i\" id=\"$op$i\" min=\"0\" max=\"100\" value=\"" . number_format(($i-1) / 14 * 100, 2) . "\"&gt;&lt;label for=\"$op$i\"&gt;Faixa $i&lt;/label&gt;&lt;br&gt;</code></pre>";
                         }
                         break;
                     default:
