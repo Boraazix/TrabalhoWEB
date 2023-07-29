@@ -53,7 +53,7 @@
             <thead>
                 <?php
                 $str = "<tr>\n";
-                $str .= "\t\t\t\t\t<th></th>\n";
+                $str .= "\t\t\t\t\t<th class=\"grandeza\">cm\kg</th>\n";
                 for ($i = $peso[0]; $i <= $peso[1]; $i++) {
                     $str .= "\t\t\t\t\t<th><span>$i</span></th>\n";
                 }
@@ -95,7 +95,7 @@
                             $cor = 'indefinida';
                         }
 
-                        $str .= "\t\t\t\t\t<td><span title=\"$tipo&#10;$j kg&#10;$i cm&#10;IMC: " . number_format($imc, 1) . "\"><i class=\"quadrado $cor fa-solid fa-square fa-lg\"></i></span></td>\n";
+                        $str .= "\t\t\t\t\t<td><span title=\"$tipo&#10;$j kg&#10;$i cm&#10;IMC: " . number_format($imc, 1) . "\"><i class=\"$cor fa-solid fa-square fa-lg\"></i></span></td>\n";
                     }
                     $str .= "\t\t\t\t</tr>\n";
                     if ($i < $altura[1])

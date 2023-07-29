@@ -65,16 +65,12 @@ th span {
     width: 1rem;
 }
 
-.quadrado {}
-
-.quadrado:hover {}
-
 .ob3 {
     color: #990000;
 }
 
 .ob2 {
-    color: #CC0000;
+    color: #BC0000;
 }
 
 .ob1 {
@@ -94,11 +90,11 @@ th span {
 }
 
 .baixog {
-    color: #0000CC;
+    color: #0000BC;
 }
 
 .baixomg {
-    color: #000099;
+    color: #000088;
 }
 
 .ob3:hover,
@@ -121,4 +117,8 @@ td {
     padding: 1.1px;
     font-size: 1rem;
     line-height: 1.1;
+}
+
+.grandeza{
+    font-size: 0.8rem;
 }
