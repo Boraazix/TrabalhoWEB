@@ -17,10 +17,38 @@
     </header>
     <main>
         <h1>Questão 2</h1>
-        <?php
-        $peso = [46, 120];
-        $altura = [146, 210];
-        ?>
+        <fieldset>
+            <legend>Critérios de Geração</legend>
+            <form action="#" method="get">
+                <?php
+                if (isset($_GET['p1']))
+                    $peso[0] = $_GET['p1']+0;
+                else
+                    $peso[0] = '46';
+                if (isset($_GET['p2']))
+                    $peso[1] = $_GET['p2']+0;
+                else
+                    $peso[1] = '120';
+                if (isset($_GET['h1']))
+                    $altura[0] = $_GET['h1']+0;
+                else
+                    $altura[0] = '146';
+                if (isset($_GET['h2']))
+                    $altura[1] = $_GET['h2']+0;
+                else
+                    $altura[1] = '210';
+
+                $str = "\t\t\t\t<label for=\"p1\">Peso: </label><input type=\"number\" id=\"p1\" name=\"p1\" min=\"40\" max=\"250\" value=\"$peso[0]\">\n";
+                $str .= "\t\t\t\t<label for=\"p2\">até </label><input type=\"number\" id=\"p2\" name=\"p2\" min=\"40\" max=\"250\" value=\"$peso[1]\">\n";
+                $str .= "\t\t\t\t<label for=\"p2\">kg (min.:40 max.:250)</label><br>\n";
+                $str .= "\t\t\t\t<label for=\"p1\">Altura: </label><input type=\"number\" id=\"h1\" name=\"h1\" min=\"130\" max=\"300\" value=\"$altura[0]\">\n";
+                $str .= "\t\t\t\t<label for=\"p2\">até </label><input type=\"number\" id=\"h2\" name=\"h2\" min=\"130\" max=\"300\" value=\"$altura[1]\">\n";
+                $str .= "\t\t\t\t<label for=\"p2\">cm (min.:130 max.:300)</label><br>\n";
+                echo $str;
+                ?>
+                <button type="submit">Gerar</button>
+            </form>
+        </fieldset><br>
         <table>
             <thead>
                 <?php
