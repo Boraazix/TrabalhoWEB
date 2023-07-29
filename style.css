@@ -6,6 +6,7 @@
 
 body {
     background-color: white;
+    margin: 1rem;
 }
 
 header, footer {
@@ -13,13 +14,28 @@ header, footer {
     color: white;
 }
 
-h2, footer p{
+h2, footer p, p#back{
     padding-left: 1rem;
 }
+
+p {
+    margin: 0;
+}
+
+p#back{
+    background-color: #242F41;
+    margin-top: 0.5em;
+}
+
+p#back a:link, p#back a:visited{
+    color: white;
+}
+p#back a:hover{
+    color: lightgrey;
+}
+
 h1 {
     background-color: #242F41;
     color: white;
     padding-left: 1rem;
-}
-hr{
 }
