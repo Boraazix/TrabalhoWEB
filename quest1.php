@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -55,25 +55,13 @@
                 }
                 ?>
 
-                <input type="radio" id="op1" name="op" value="text" <?= $checked[0] ?>><label for="op1">Texto</label><br>
-                <input type="radio" id="op2" name="op" value="password" <?= $checked[1] ?>><label for="op2">Senha</label><br>
-                <input type="radio" id="op3" name="op" value="button" <?= $checked[2] ?>><label for="op3">Botão</label><br>
-                <input type="radio" id="op4" name="op" value="radio" <?= $checked[3] ?>><label for="op4">Rádio</label><br>
-                <input type="radio" id="op5" name="op" value="checkbox" <?= $checked[4] ?>><label for="op5">Caixa de Seleção</label><br>
-                <input type="radio" id="op6" name="op" value="range" <?= $checked[5] ?>><label for="op6">Faixa</label><br>
+                <input type="radio" id="op1" name="op" value="text" onclick="document.getElementById('main').submit()" <?= $checked[0] ?>><label for="op1">Texto</label><br>
+                <input type="radio" id="op2" name="op" value="password" onclick="document.getElementById('main').submit()" <?= $checked[1] ?>><label for="op2">Senha</label><br>
+                <input type="radio" id="op3" name="op" value="button" onclick="document.getElementById('main').submit()" <?= $checked[2] ?>><label for="op3">Botão</label><br>
+                <input type="radio" id="op4" name="op" value="radio" onclick="document.getElementById('main').submit()" <?= $checked[3] ?>><label for="op4">Rádio</label><br>
+                <input type="radio" id="op5" name="op" value="checkbox" onclick="document.getElementById('main').submit()" <?= $checked[4] ?>><label for="op5">Caixa de Seleção</label><br>
+                <input type="radio" id="op6" name="op" value="range" onclick="document.getElementById('main').submit()" <?= $checked[5] ?>><label for="op6">Faixa</label><br>
             </form>
-            <script>
-                const formulario = document.getElementById('main');
-                const botoesRadio = formulario.querySelectorAll('input[type="radio"]');
-
-                function enviarFormulario() {
-                    formulario.submit();
-                }
-
-                botoesRadio.forEach(botao => {
-                    botao.addEventListener('change', enviarFormulario);
-                });
-            </script>
         </fieldset>
         <div style="margin: 1rem 0;">
             <?php
