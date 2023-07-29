@@ -72,42 +72,57 @@
                     case 'text':
                     case 'password':
                         for ($i = 1; $i <= $qnt; $i++) {
-                            echo "<input type=\"$op\" name=\"$op$i\" id=\"$op$i\"><br>\n";
+                            echo "<input type=\"$op\" name=\"$op$i\" id=\"$op$i\"><br>\n\t\t\t";
                         }
                         for ($i = 1; $i <= $qnt; $i++) {
-                            echo "<pre><code>&lt;input type=\"$op\" name=\"$op$i\" id=\"$op$i\"&gt;&lt;br&gt;</code></pre>";
+                            $str = "<pre><code>&lt;input type=\"$op\" name=\"$op$i\" id=\"$op$i\"&gt;&lt;br&gt;</code></pre>\n";
+                            if($i<$qnt)
+                                $str .= "\t\t\t";
+                            echo $str;
                         }
                         break;
                     case 'button':
                         for ($i = 1; $i <= $qnt; $i++) {
-                            echo "<input type=\"$op\" name=\"$op$i\" id=\"$op$i\" value=\"Botão $i\"><br>\n";
+                            echo "<input type=\"$op\" name=\"$op$i\" id=\"$op$i\" value=\"Botão $i\"><br>\n\t\t\t";
                         }
                         for ($i = 1; $i <= $qnt; $i++) {
-                            echo "<pre><code>&lt;input type=\"$op\" name=\"$op$i\" id=\"$op$i\" value=\"Botão $i\"&gt;&lt;br&gt;</code></pre>";
+                            $str = "<pre><code>&lt;input type=\"$op\" name=\"$op$i\" id=\"$op$i\" value=\"Botão $i\"&gt;&lt;br&gt;</code></pre>\n";
+                            if($i<$qnt)
+                                $str .= "\t\t\t";
+                            echo $str;
                         }
                         break;
                     case 'radio':
                         for ($i = 1; $i <= $qnt; $i++) {
-                            echo "<input type=\"$op\" name=\"{$op}A\" id=\"$op$i\" value=\"Radio$i\"><label for=\"$op$i\">Rádio $i</label><br>\n";
+                            echo "<input type=\"$op\" name=\"{$op}A\" id=\"$op$i\" value=\"Radio$i\"><label for=\"$op$i\">Rádio $i</label><br>\n\t\t\t";
                         }
                         for ($i = 1; $i <= $qnt; $i++) {
-                            echo "<pre><code>&lt;input type=\"$op\" name=\"{$op}A\" id=\"$op$i\" value=\"Radio$i\"&gt;&lt;label for=\"$op$i\"&gt;Rádio $i&lt;/label&gt;&lt;br&gt;</code></pre>";
+                            $str = "<pre><code>&lt;input type=\"$op\" name=\"{$op}A\" id=\"$op$i\" value=\"Radio$i\"&gt;&lt;label for=\"$op$i\"&gt;Rádio $i&lt;/label&gt;&lt;br&gt;</code></pre>\n";
+                            if($i<$qnt)
+                                $str .= "\t\t\t";
+                            echo $str;
                         }
                         break;
                     case 'checkbox':
                         for ($i = 1; $i <= $qnt; $i++) {
-                            echo "<input type=\"$op\" name=\"$op$i\" id=\"$op$i\"><label for=\"$op$i\">Caixa de Seleção $i</label><br>\n";
+                            echo "<input type=\"$op\" name=\"$op$i\" id=\"$op$i\"><label for=\"$op$i\">Caixa de Seleção $i</label><br>\n\t\t\t";
                         }
                         for ($i = 1; $i <= $qnt; $i++) {
-                            echo "<pre><code>&lt;input type=\"$op\" name=\"$op$i\" id=\"$op$i\"&gt;&lt;label for=\"$op$i\"&gt;Caixa de Seleção $i&lt;/label&gt;&lt;br&gt;</code></pre>";
+                            $str = "<pre><code>&lt;input type=\"$op\" name=\"$op$i\" id=\"$op$i\"&gt;&lt;label for=\"$op$i\"&gt;Caixa de Seleção $i&lt;/label&gt;&lt;br&gt;</code></pre>\n";
+                            if($i<$qnt)
+                                $str .= "\t\t\t";
+                            echo $str;
                         }
                         break;
                     case 'range':
                         for ($i = 1; $i <= $qnt; $i++) {
-                            echo "<input type=\"$op\" name=\"$op$i\" id=\"$op$i\" min=\"0\" max=\"100\" value=\"" . number_format(($i-1) / 14 * 100, 2) . "\"><label for=\"$op$i\">Faixa $i</label><br>\n";
+                            echo "<input type=\"$op\" name=\"$op$i\" id=\"$op$i\" min=\"0\" max=\"100\" value=\"" . number_format(($i-1) / 14 * 100, 2) . "\"><label for=\"$op$i\">Faixa $i</label><br>\n\t\t\t";
                         }
                         for ($i = 1; $i <= $qnt; $i++) {
-                            echo "<pre><code>&lt;input type=\"$op\" name=\"$op$i\" id=\"$op$i\" min=\"0\" max=\"100\" value=\"" . number_format(($i-1) / 14 * 100, 2) . "\"&gt;&lt;label for=\"$op$i\"&gt;Faixa $i&lt;/label&gt;&lt;br&gt;</code></pre>";
+                            $str = "<pre><code>&lt;input type=\"$op\" name=\"$op$i\" id=\"$op$i\" min=\"0\" max=\"100\" value=\"" . number_format(($i-1) / 14 * 100, 2) . "\"&gt;&lt;label for=\"$op$i\"&gt;Faixa $i&lt;/label&gt;&lt;br&gt;</code></pre>\n";
+                            if($i<$qnt)
+                                $str .= "\t\t\t";
+                            echo $str;
                         }
                         break;
                     default:
