@@ -24,12 +24,16 @@
     }
     ?>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</p>
-    <a class="correta" href="quest3-4.php?<?php echo http_build_query($respostas); ?>&questao3=alternativa1">Alternativa 1</a><br>
-    <a href="quest3-4.php?<?php echo http_build_query($respostas); ?>&questao3=alternativa2">Alternativa 2</a><br>
-    <a href="quest3-4.php?<?php echo http_build_query($respostas); ?>&questao3=alternativa3">Alternativa 3</a><br>
-    <a href="quest3-4.php?<?php echo http_build_query($respostas); ?>&questao3=alternativa4">Alternativa 4</a><br>
-    <a href="quest3-4.php?<?php echo http_build_query($respostas); ?>&questao3=alternativa5">Alternativa 5</a><br>
-    <a href="quest3.php">Cancelar</a>
+    <ol type="A">
+        <li><a class="correta" href="quest3-4.php?<?php echo http_build_query($respostas); ?>&questao3=alternativa1">Lorem ipsum dolor sit amet consectetur.</a><br>
+        <li><a href="quest3-4.php?<?php echo http_build_query($respostas); ?>&questao3=alternativa2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum.</a><br>
+        <li><a href="quest3-4.php?<?php echo http_build_query($respostas); ?>&questao3=alternativa3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a><br>
+        <li><a href="quest3-4.php?<?php echo http_build_query($respostas); ?>&questao3=alternativa4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ipsum?</a><br>
+        <li><a href="quest3-4.php?<?php echo http_build_query($respostas); ?>&questao3=alternativa5">Lorem ipsum dolor sit amet consectetur.</a><br>
+    </ol>
+
+    <a href="quest3.php">Cancelar</a><br>
+    <a href="index.php">Página inicial</a>
 </body>
 <footer>
     <hr>

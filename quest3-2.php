@@ -21,13 +21,21 @@
     }
     ?>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</p>
-    <a href="quest3-3.php?<?php echo http_build_query($respostas); ?>&questao2=alternativa1">Alternativa 1</a><br>
-    <a href="quest3-3.php?<?php echo http_build_query($respostas); ?>&questao2=alternativa2">Alternativa 2</a><br>
-    <a class="correta" href="quest3-3.php?<?php echo http_build_query($respostas); ?>&questao2=alternativa3">Alternativa
-        3</a><br>
-    <a href="quest3-3.php?<?php echo http_build_query($respostas); ?>&questao2=alternativa4">Alternativa 4</a><br>
-    <a href="quest3-3.php?<?php echo http_build_query($respostas); ?>&questao2=alternativa5">Alternativa 5</a><br>
-    <a href="quest3.php">Cancelar</a>
+    <ol type="A">
+        <li><a href="quest3-3.php?<?php echo http_build_query($respostas); ?>&questao2=alternativa1">Lorem ipsum dolor
+                sit amet, consectetur adipisicing elit. Nihil.</a><br>
+        <li><a href="quest3-3.php?<?php echo http_build_query($respostas); ?>&questao2=alternativa2">Lorem, ipsum dolor
+                sit amet consectetur adipisicing elit.</a><br>
+        <li><a class="correta" href="quest3-3.php?<?php echo http_build_query($respostas); ?>&questao2=alternativa3">Lorem ipsum dolor
+                sit amet consectetur.</a><br>
+        <li><a href="quest3-3.php?<?php echo http_build_query($respostas); ?>&questao2=alternativa4">Lorem ipsum dolor
+                sit amet.</a><br>
+        <li><a href="quest3-3.php?<?php echo http_build_query($respostas); ?>&questao2=alternativa5">Lorem ipsum, dolor
+                sit amet consectetur adipisicing elit. Explicabo.</a><br>
+    </ol>
+
+    <br><a href="quest3.php">Cancelar</a><br>
+    <a href="index.php">Página inicial</a>
 </body>
 <footer>
     <hr>
