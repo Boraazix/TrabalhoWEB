@@ -19,13 +19,13 @@
         <ul>
             <li><a href="./quest1.php">Questão 1</a></li>
             <li><a href="./quest2.php">Questão 2</a></li>
-            <li><a href="./quest3.php">Questão 3</a></li>
+            <li><a href="./quest3-1.php">Questão 3</a></li>
             <li><a href="./quest4.php">Questão 4</a></li>
         </ul>
     </main>
     <footer>
         <hr>
-        <p>Russell Edward - &copy; 2023 - all rights reserved</p>
+        <p>Russell Edward & Vitor Gabriel - &copy; 2023 - all rights reserved</p>
         <hr>
     </footer>
 </body>

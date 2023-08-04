@@ -107,7 +107,7 @@ th span {
 }
 
 .sobre:hover,
-.ideal:hover{
+.ideal:hover {
     filter: brightness(70%);
 }
 
@@ -119,6 +119,42 @@ td {
     line-height: 1.1;
 }
 
-.grandeza{
+.grandeza {
     font-size: 0.8rem;
+}
+
+#cancel {
+    margin-bottom: 0.5rem;
+}
+
+.icon {
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.done {
+    color: green;
+}
+.close {
+    color: red;
+}
+
+.nobottom{
+    padding-bottom: 0;
+    margin-bottom: 1rem;
+}
+
+#tabelasif tr{
+    border-bottom: solid black 1px;
+}
+#tabelasif tr:nth-child(even){
+    background-color: #a0a5aa;
+}
+
+#tabelasif th{
+    border-top: solid black 1px;
+    padding: 0.2rem 0.5rem;
+}
+#tabelasif td{
+    padding: 0.2rem 0.5rem;
 }

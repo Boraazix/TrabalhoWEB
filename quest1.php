@@ -15,9 +15,9 @@
         <hr>
     </header>
     <main>
-        <h1>Questão 1</h1>
+        <h1>Gerador de elementos HTML</h1>
         <fieldset>
-            <legend>Critérios de Geração</legend>
+            <legend>Critérios de geração</legend>
             <form action="#" method="get" id="main">
                 <?php
                 if (isset($_GET['qnt']))
@@ -64,66 +64,57 @@
             </form>
         </fieldset>
         <div style="margin: 1rem 0;">
-            <?php
+<?php
             if (isset($_GET['qnt']) && isset($_GET['op'])) {
                 $qnt = $_GET['qnt'];
                 $op = $_GET['op'];
+                $str = "";
                 switch ($op) {
                     case 'text':
                     case 'password':
                         for ($i = 1; $i <= $qnt; $i++) {
-                            echo "<input type=\"$op\" name=\"$op$i\" id=\"$op$i\"><br>\n\t\t\t";
+                            $str .= "\t\t\t<input type=\"$op\" name=\"$op$i\" id=\"$op$i\"><br>\n";
                         }
                         for ($i = 1; $i <= $qnt; $i++) {
-                            $str = "<pre><code>&lt;input type=\"$op\" name=\"$op$i\" id=\"$op$i\"&gt;&lt;br&gt;</code></pre>\n";
-                            if($i<$qnt)
-                                $str .= "\t\t\t";
-                            echo $str;
+                            $str .= "\t\t\t<pre><code>&lt;input type=\"$op\" name=\"$op$i\" id=\"$op$i\"&gt;&lt;br&gt;</code></pre>\n";
                         }
+                        echo $str;
                         break;
                     case 'button':
                         for ($i = 1; $i <= $qnt; $i++) {
-                            echo "<input type=\"$op\" name=\"$op$i\" id=\"$op$i\" value=\"Botão $i\"><br>\n\t\t\t";
+                            $str .= "\t\t\t<input type=\"$op\" name=\"$op$i\" id=\"$op$i\" value=\"Botão $i\"><br>\n";
                         }
                         for ($i = 1; $i <= $qnt; $i++) {
-                            $str = "<pre><code>&lt;input type=\"$op\" name=\"$op$i\" id=\"$op$i\" value=\"Botão $i\"&gt;&lt;br&gt;</code></pre>\n";
-                            if($i<$qnt)
-                                $str .= "\t\t\t";
-                            echo $str;
+                            $str .= "\t\t\t<pre><code>&lt;input type=\"$op\" name=\"$op$i\" id=\"$op$i\" value=\"Botão $i\"&gt;&lt;br&gt;</code></pre>\n";
                         }
+                        echo $str;
                         break;
                     case 'radio':
                         for ($i = 1; $i <= $qnt; $i++) {
-                            echo "<input type=\"$op\" name=\"{$op}A\" id=\"$op$i\" value=\"Radio$i\"><label for=\"$op$i\">Rádio $i</label><br>\n\t\t\t";
+                            $str .= "\t\t\t<input type=\"$op\" name=\"{$op}A\" id=\"$op$i\" value=\"Radio$i\"><label for=\"$op$i\">Rádio $i</label><br>\n";
                         }
                         for ($i = 1; $i <= $qnt; $i++) {
-                            $str = "<pre><code>&lt;input type=\"$op\" name=\"{$op}A\" id=\"$op$i\" value=\"Radio$i\"&gt;&lt;label for=\"$op$i\"&gt;Rádio $i&lt;/label&gt;&lt;br&gt;</code></pre>\n";
-                            if($i<$qnt)
-                                $str .= "\t\t\t";
-                            echo $str;
+                            $str .= "\t\t\t<pre><code>&lt;input type=\"$op\" name=\"{$op}A\" id=\"$op$i\" value=\"Radio$i\"&gt;&lt;label for=\"$op$i\"&gt;Rádio $i&lt;/label&gt;&lt;br&gt;</code></pre>\n";
                         }
+                        echo $str;
                         break;
                     case 'checkbox':
                         for ($i = 1; $i <= $qnt; $i++) {
-                            echo "<input type=\"$op\" name=\"$op$i\" id=\"$op$i\"><label for=\"$op$i\">Caixa de Seleção $i</label><br>\n\t\t\t";
+                            $str .= "\t\t\t<input type=\"$op\" name=\"$op$i\" id=\"$op$i\"><label for=\"$op$i\">Caixa de Seleção $i</label><br>\n";
                         }
                         for ($i = 1; $i <= $qnt; $i++) {
-                            $str = "<pre><code>&lt;input type=\"$op\" name=\"$op$i\" id=\"$op$i\"&gt;&lt;label for=\"$op$i\"&gt;Caixa de Seleção $i&lt;/label&gt;&lt;br&gt;</code></pre>\n";
-                            if($i<$qnt)
-                                $str .= "\t\t\t";
-                            echo $str;
+                            $str .= "\t\t\t<pre><code>&lt;input type=\"$op\" name=\"$op$i\" id=\"$op$i\"&gt;&lt;label for=\"$op$i\"&gt;Caixa de Seleção $i&lt;/label&gt;&lt;br&gt;</code></pre>\n";
                         }
+                        echo $str;
                         break;
                     case 'range':
                         for ($i = 1; $i <= $qnt; $i++) {
-                            echo "<input type=\"$op\" name=\"$op$i\" id=\"$op$i\" min=\"0\" max=\"100\" value=\"" . number_format(($i-1) / 14 * 100, 2) . "\"><label for=\"$op$i\">Faixa $i</label><br>\n\t\t\t";
+                            $str .= "\t\t\t<input type=\"$op\" name=\"$op$i\" id=\"$op$i\" min=\"0\" max=\"100\" value=\"" . number_format(($i-1) / 14 * 100, 2) . "\"><label for=\"$op$i\">Faixa $i</label><br>\n";
                         }
                         for ($i = 1; $i <= $qnt; $i++) {
-                            $str = "<pre><code>&lt;input type=\"$op\" name=\"$op$i\" id=\"$op$i\" min=\"0\" max=\"100\" value=\"" . number_format(($i-1) / 14 * 100, 2) . "\"&gt;&lt;label for=\"$op$i\"&gt;Faixa $i&lt;/label&gt;&lt;br&gt;</code></pre>\n";
-                            if($i<$qnt)
-                                $str .= "\t\t\t";
-                            echo $str;
+                            $str .= "\t\t\t<pre><code>&lt;input type=\"$op\" name=\"$op$i\" id=\"$op$i\" min=\"0\" max=\"100\" value=\"" . number_format(($i-1) / 14 * 100, 2) . "\"&gt;&lt;label for=\"$op$i\"&gt;Faixa $i&lt;/label&gt;&lt;br&gt;</code></pre>\n";
                         }
+                        echo $str;
                         break;
                     default:
                         break;
@@ -137,7 +128,7 @@
     </main>
     <footer>
         <hr>
-        <p>Russell Edward - &copy; 2023 - all rights reserved</p>
+        <p>Russell Edward & Vitor Gabriel - &copy; 2023 - all rights reserved</p>
         <hr>
     </footer>
 </body>

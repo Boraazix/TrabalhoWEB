@@ -16,11 +16,11 @@
         <hr>
     </header>
     <main>
-        <h1>Questão 2</h1>
+        <h1>Mapa de índice de massa corporal</h1>
         <fieldset>
-            <legend>Critérios de Geração</legend>
+            <legend>Critérios de geração</legend>
             <form action="#" method="get">
-                <?php
+<?php
                 if (isset($_GET['p1']))
                     $peso[0] = $_GET['p1']+0;
                 else
@@ -38,15 +38,16 @@
                 else
                     $altura[1] = '210';
 
-                $str = "\t\t\t\t<label for=\"p1\">Peso: </label><input type=\"number\" id=\"p1\" name=\"p1\" min=\"40\" max=\"250\" value=\"$peso[0]\">\n";
-                $str .= "\t\t\t\t<label for=\"p2\">até </label><input type=\"number\" id=\"p2\" name=\"p2\" min=\"40\" max=\"250\" value=\"$peso[1]\">\n";
+                $str = "\t\t\t\t<label for=\"p1\">Peso: </label><input type=\"number\" id=\"p1\" name=\"p1\" min=\"40\" max=\"250\" required value=\"$peso[0]\">\n";
+                $str .= "\t\t\t\t<label for=\"p2\">até </label><input type=\"number\" id=\"p2\" name=\"p2\" min=\"40\" max=\"250\" required value=\"$peso[1]\">\n";
                 $str .= "\t\t\t\t<label for=\"p2\">kg (min.:40 max.:250)</label><br>\n";
-                $str .= "\t\t\t\t<label for=\"p1\">Altura: </label><input type=\"number\" id=\"h1\" name=\"h1\" min=\"130\" max=\"300\" value=\"$altura[0]\">\n";
-                $str .= "\t\t\t\t<label for=\"p2\">até </label><input type=\"number\" id=\"h2\" name=\"h2\" min=\"130\" max=\"300\" value=\"$altura[1]\">\n";
+                $str .= "\t\t\t\t<label for=\"p1\">Altura: </label><input type=\"number\" id=\"h1\" name=\"h1\" min=\"130\" max=\"300\" required value=\"$altura[0]\">\n";
+                $str .= "\t\t\t\t<label for=\"p2\">até </label><input type=\"number\" id=\"h2\" name=\"h2\" min=\"130\" max=\"300\" required value=\"$altura[1]\">\n";
                 $str .= "\t\t\t\t<label for=\"p2\">cm (min.:130 max.:300)</label><br>\n";
                 echo $str;
                 ?>
                 <button type="submit">Gerar</button>
+                <button type="button" onclick="defaultValues()">Valores padrão</button>
             </form>
         </fieldset><br>
         <table>
@@ -111,7 +112,7 @@
     </main>
     <footer>
         <hr>
-        <p>Russell Edward - &copy; 2023 - all rights reserved</p>
+        <p>Russell Edward & Vitor Gabriel - &copy; 2023 - all rights reserved</p>
         <hr>
     </footer>
 </body>
