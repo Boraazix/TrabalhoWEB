@@ -7,6 +7,7 @@
     <title>Trabalho</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/9578d32024.js" crossorigin="anonymous"></script>
+    <script src="code.js"></script>
 </head>
 
 <body>
